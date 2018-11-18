@@ -20,4 +20,4 @@ COPY supervisord.conf /
 
 EXPOSE 34567
 
-CMD ["supervisord" "-c" "supervisord.conf"]
+CMD ["/supervisord" "-c" "supervisord.conf"]
