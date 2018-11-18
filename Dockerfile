@@ -1,8 +1,9 @@
 FROM python:2.7.15-jessie
- 
+
 WORKDIR /
 
 RUN mkdir -p /root/PyOne /data/db /data/log
+
 COPY PyOne/ /root/PyOne
 
 RUN pip install supervisor && \
@@ -13,8 +14,8 @@ RUN pip install supervisor && \
   echo "deb http://repo.mongodb.org/apt/debian jessie/mongodb-org/4.0 main" | tee /etc/apt/sources.list.d/mongodb-org-4.0.list && \
   apt-get update && \
   apt-get install -y mongodb-org redis-server && \
-  rm -rf /var/lib/apt/lists/*
-	
+  rm -rf /var/lib/apt/lists/*	
+  
 COPY supervisord.conf /
 
 EXPOSE 34567
