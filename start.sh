@@ -1,11 +1,10 @@
+
 #!/bin/bash
 
-lockfile="/data/lock"
-
-if [ ! -f "$lockfile" ];then
+if [ ! -f "/data/mongodb.lock" ];then
 mongod --dbpath /data/db --fork --logpath /data/log/mongodb.log &
 wait $!
-touch $lockfile& \
+touch /data/mongodb.lock
 fi
 
 redis-server &
