@@ -1,7 +1,7 @@
 FROM python:2.7.15-jessie
  
 WORKDIR /
-RUN mkdir -p /root/PyOne /data/db /data/log
+RUN mkdir -p /root/PyOne /data/db /data/log /down
 COPY PyOne/ /root/PyOne
 
 WORKDIR /root/PyOne/
