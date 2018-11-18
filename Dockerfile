@@ -18,6 +18,6 @@ RUN pip install -r requirements.txt && \
 	
 COPY supervisord.conf /
 
-EXPOSE 345567
+EXPOSE 34567
 
 CMD ["supervisord" "-c" "supervisord.conf"]
