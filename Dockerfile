@@ -17,8 +17,9 @@ RUN pip install -r requirements.txt && \
   rm -rf /var/lib/apt/lists/*
 
 WORKDIR /	
-COPY start.sh /
-RUN chmod +x /start.sh
+COPY start.sh aria2c /
+RUN mv aria2c /usr/local/bin && \
+  chmod +x /start.sh
 
 EXPOSE 34567
 
