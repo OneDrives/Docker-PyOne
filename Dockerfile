@@ -19,7 +19,7 @@ RUN pip install -r requirements.txt && \
 WORKDIR /	
 COPY start.sh aria2c /
 RUN mv aria2c /usr/local/bin && \
-  chmod +x /start.sh
+  chmod +x /start.sh /usr/local/bin/aria2c
 
 EXPOSE 34567
 
