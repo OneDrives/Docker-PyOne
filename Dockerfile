@@ -1,7 +1,7 @@
 FROM python:2.7.15-jessie
  
 WORKDIR /
-RUN mkdir -p /root/PyOne /data/db /data/log /data/aria2 /data/aria2/download && \
+RUN mkdir -p /root/PyOne /data/db /data/log /data/aria2/download && \
   touch /data/aria2/aria2.session
 COPY PyOne/ /root/PyOne
 COPY aria2.conf /data/aria2/
