@@ -1,4 +1,4 @@
-FROM python:2.7.15-jessie
+FROM python:2.7.15-stretch
  
 WORKDIR /
 RUN mkdir -p /root/PyOne /data/db /data/log /data/aria2/download && \
