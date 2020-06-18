@@ -8,7 +8,7 @@ COPY aria2.conf /data/aria2/
 
 WORKDIR /root/PyOne/
 
-RUN apt-get update && apt install curl -y && pip install -r requirements.txt && \
+RUN apt-get update && apt install curl -y && python -m pip install --upgrade pip && pip install -r requirements.txt && \
   cp self_config.py.sample self_config.py && \
   curl https://www.mongodb.org/static/pgp/server-3.6.asc | apt-key add - && \
   echo "deb http://repo.mongodb.org/apt/debian stretch/mongodb-org/3.6 main" | tee /etc/apt/sources.list.d/mongodb-org-3.6.list && \
